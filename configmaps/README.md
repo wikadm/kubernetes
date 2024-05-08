@@ -1,16 +1,31 @@
 ########
 Create configmap with settings
+
+
+
 echo hello world >> index.html
+
+
 
 k create cm webindex --from-file=index.html
 
+
+
 --Edit yml
+
+
 
 --Deploy nginx app with configmap volumes
 
+
+
 k apply -f webserver.yml
 
+
+
 --Test on pod file from yml
+
+
 
 k exec -it webserver-76d44586d-7z7cw -- /bin/bash
 
