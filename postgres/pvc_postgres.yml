@@ -1,9 +1,11 @@
 kind: PersistentVolumeClaim
 apiVersion: v1
 metadata:
-  name: wiki-pvc
+  name: postgres-pvc
+  labels:
+    app: postgres
 spec:
-  storageClassName: k8s-stg
+#  storageClassName: postgres-data
   accessModes:
     - ReadWriteOnce
   resources:
