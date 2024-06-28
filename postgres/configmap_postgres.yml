@@ -1,9 +1,9 @@
 apiVersion: v1
-kind: configMap
+kind: ConfigMap
 metadata:
   name: postgres-config
   labels:
-    app: wikijs-postgres
+    app: postgres
 data:
   POSTGRES_DB: wiki
   POSTGRES_USER: postgres
