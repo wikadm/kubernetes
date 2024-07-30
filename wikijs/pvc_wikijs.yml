@@ -1,0 +1,15 @@
+kind: PersistentVolumeClaim
+apiVersion: v1
+metadata:
+  name: wikijs-pvc
+  namespace: wikijs
+  labels:
+    app: wikijs
+spec:
+  storageClassName: wikijs-data
+  accessModes:
+    - ReadWriteOnce
+  resources:
+    requests:
+      storage: 3Gi
+

@@ -1,0 +1,17 @@
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: pv002
+  namespace: wikijs
+  labels:
+    type: local
+    app: wikijs
+spec:
+  storageClassName: wikijs-data
+  accessModes:
+    - ReadWriteOnce
+  capacity: 
+    storage: 5Gi
+  hostPath:
+    path: /data/pv002
+
